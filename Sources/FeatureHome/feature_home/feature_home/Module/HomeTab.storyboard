@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ob4-Ux-uWz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="lrQ-ao-tZE">
+            <objects>
+                <viewController storyboardIdentifier="HOME" id="ob4-Ux-uWz" customClass="HomeViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc6-qQ-vl7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_shapes" translatesAutoresizingMaskIntoConstraints="NO" id="Sg3-Pg-bBi">
+                                <rect key="frame" x="0.0" y="430" width="414" height="472"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="472" id="4DZ-n3-5kJ"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yM-12-jmD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="SpM-Os-u4y" kind="embed" id="ZCE-xc-fPB"/>
+                                </connections>
+                            </containerView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-ol-mEZ" userLabel="LoadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-vq-bp8">
+                                        <rect key="frame" x="132" y="287.5" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="n8J-A1-hzd"/>
+                                            <constraint firstAttribute="width" constant="150" id="wS4-VK-gLb"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" name="FolksamColors/beige3"/>
+                                <constraints>
+                                    <constraint firstItem="SSF-vq-bp8" firstAttribute="centerY" secondItem="kxi-ol-mEZ" secondAttribute="centerY" id="1i0-3G-S2m"/>
+                                    <constraint firstItem="SSF-vq-bp8" firstAttribute="centerX" secondItem="kxi-ol-mEZ" secondAttribute="centerX" id="4b3-hX-ulx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="njG-cF-2RR"/>
+                        <color key="backgroundColor" name="FolksamColors/beige3"/>
+                        <constraints>
+                            <constraint firstItem="Sg3-Pg-bBi" firstAttribute="leading" secondItem="njG-cF-2RR" secondAttribute="leading" id="2RU-1C-yub"/>
+                            <constraint firstItem="kxi-ol-mEZ" firstAttribute="trailing" secondItem="njG-cF-2RR" secondAttribute="trailing" id="2eL-SI-NTv"/>
+                            <constraint firstItem="8yM-12-jmD" firstAttribute="leading" secondItem="njG-cF-2RR" secondAttribute="leading" id="2hc-cu-pAX"/>
+                            <constraint firstItem="njG-cF-2RR" firstAttribute="trailing" secondItem="Sg3-Pg-bBi" secondAttribute="trailing" id="3Np-ml-PP1"/>
+                            <constraint firstItem="kxi-ol-mEZ" firstAttribute="bottom" secondItem="njG-cF-2RR" secondAttribute="bottom" id="7QP-z7-y8x"/>
+                            <constraint firstItem="8yM-12-jmD" firstAttribute="bottom" secondItem="njG-cF-2RR" secondAttribute="bottom" id="8cm-Cc-Tkt"/>
+                            <constraint firstItem="kxi-ol-mEZ" firstAttribute="leading" secondItem="njG-cF-2RR" secondAttribute="leading" id="Crd-aH-zQs"/>
+                            <constraint firstItem="kxi-ol-mEZ" firstAttribute="top" secondItem="njG-cF-2RR" secondAttribute="top" id="Ldd-xJ-kPC"/>
+                            <constraint firstItem="8yM-12-jmD" firstAttribute="trailing" secondItem="njG-cF-2RR" secondAttribute="trailing" id="MR4-6l-DPO"/>
+                            <constraint firstItem="njG-cF-2RR" firstAttribute="bottom" secondItem="Sg3-Pg-bBi" secondAttribute="bottom" constant="-177" id="Na6-8j-xgZ"/>
+                            <constraint firstItem="8yM-12-jmD" firstAttribute="top" secondItem="njG-cF-2RR" secondAttribute="top" id="TVU-lY-wTK"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="loadingView" destination="kxi-ol-mEZ" id="EX3-Qz-gVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hM-fk-Lq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.028985507246382" y="-27.455357142857142"/>
+        </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="Wek-1p-oj9">
+            <objects>
+                <tableViewController id="SpM-Os-u4y" customClass="HomeTableViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6Y-Wg-wOE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="FolksamColors/beige3"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="SpM-Os-u4y" id="06x-Nf-7Xx"/>
+                            <outlet property="delegate" destination="SpM-Os-u4y" id="3yw-Oy-bVp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nv0-2c-mK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_shapes" width="375" height="326"/>
+        <namedColor name="FolksamColors/beige3">
+            <color red="0.96862745098039216" green="0.96078431372549022" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
