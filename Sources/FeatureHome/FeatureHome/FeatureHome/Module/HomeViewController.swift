@@ -51,7 +51,7 @@ public class HomeViewController<S: StoreType>: UIViewController where S.State: H
     // MARK: - Factory
 
     public static func make(apiService: HomeServiceProtocol, store: S, delegate: HomeDelegate) -> UINavigationController {
-        let storyboard = UIStoryboard(name: "HomeTab", bundle: Bundle(for: Self.self))
+        let storyboard = UIStoryboard(name: "HomeTab", bundle: Bundle.module)
         if #available(iOS 13.0, *) {
             let (nav, vc) = storyboard.instantiateWithNavigationController(childOfType: HomeViewController.self, creator: { HomeViewController(coder: $0, store: store)! })
             vc.apiService = apiService

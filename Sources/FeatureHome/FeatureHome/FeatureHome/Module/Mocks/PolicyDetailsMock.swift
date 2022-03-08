@@ -13,7 +13,7 @@ struct PolicyDetailsMock: Codable {
     static var bundle: Bundle { return Bundle(for: PolicyDetailsMock.Foo.self) }
 
     static func load() -> PolicyDetailsMock {
-        let data: PolicyDetailsMock = loadJSONFile("PolicyDetails.json", bundle: bundle)
+        let data: PolicyDetailsMock = loadJSONFile("PolicyDetails.json", bundle:  )
         return data
     }
 
