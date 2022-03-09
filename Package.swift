@@ -33,7 +33,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FeatureHome",
-            dependencies: [.product(name: "FolksamCommon", package: "FolksamCommon"), .product(name: "ReSwift", package: "ReSwift")], resources: [.copy("Mocks")]),
+            dependencies: [.product(name: "FolksamCommon", package: "FolksamCommon"), .product(name: "ReSwift", package: "ReSwift")], resources: [.copy("FeatureHome/Sources/FeatureHome/PolicyDetails.json")]),
         .testTarget(
             name: "FeatureHomeTests",
             dependencies: ["FeatureHome", .product(name: "SnapshotTesting", package: "swift-snapshot-testing")]),
