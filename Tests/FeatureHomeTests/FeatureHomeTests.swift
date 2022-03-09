@@ -1,10 +1,9 @@
 import Foundation
-//@testable import Home
+@testable import FeatureHome
 import ReSwift
 import SnapshotTesting
 import XCTest
 import FolksamCommon
-import FeatureHome
 
 struct HomeUserMock: ParentUser {
     var email: String? = "ddadaw@dda.com"
