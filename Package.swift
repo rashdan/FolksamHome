@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -20,11 +20,11 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "FolksamCommon",
-                     url: "https://github.com/rashdan/FolksamCommon.git", .upToNextMajor(from: "0.1.4")),
         .package(url: "https://github.com/ReSwift/ReSwift.git", .upToNextMajor(from: "6.1.0")),
         .package(
-            url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.9.0")
+            url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.9.0"),
+        .package(name: "FolksamCommon",
+                 url: "https://github.com/rashdan/FolksamCommon.git", .upToNextMajor(from: "0.1.4")),
         
         //https://rashdan@bitbucket.org/folksamfuturelab/folksamcommon.git
     ],
@@ -33,7 +33,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FeatureHome",
-            dependencies: [.product(name: "FolksamCommon", package: "FolksamCommon"), .product(name: "ReSwift", package: "ReSwift")], resources: [.copy("feature_home/feature_home/Module/Resources/PolicyDetails.json")]),
+            dependencies: [.product(name: "FolksamCommon", package: "FolksamCommon"), .product(name: "ReSwift", package: "ReSwift")],
+            resources: [.copy("feature_home/feature_home/Module/Resources/PolicyDetails.json")]),
         .testTarget(
             name: "FeatureHomeTests",
             dependencies: ["FeatureHome", .product(name: "SnapshotTesting", package: "swift-snapshot-testing")]),
