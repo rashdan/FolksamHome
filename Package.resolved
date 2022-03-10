@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "FolksamCommon",
-        "repositoryURL": "https://rashdan@bitbucket.org/folksamfuturelab/folksamcommon.git",
+        "repositoryURL": "https://github.com/rashdan/FolksamCommon.git",
         "state": {
           "branch": null,
-          "revision": "d3dd8a7962d075040a5f7a95a638a176ae0d0183",
-          "version": "0.1.1"
+          "revision": "0726ec5304c8ba374fc3ec0d762d1dc0ada24705",
+          "version": "0.1.4"
         }
       },
       {
